@@ -1,37 +1,30 @@
 import React from "react";
 import "./TaskList.css";
 
-// Componente TaskList: Exibe a lista de tarefas com opções de marcar como completa, editar ou excluir
 const TaskList = ({ tasks, onDelete, onEdit, onToggle }) => {
   return (
     <ul className="task-list">
-      {tasks.map(
-        (
-          task,
-          index // Mapeia cada tarefa para um item da lista
-        ) => (
-          <li key={index} className="task-item">
-            <div className="task-div">
-              <input
-                type="checkbox"
-                checked={task.completed} // Marca o checkbox se a tarefa estiver concluída
-                onChange={() => onToggle(index)} // Alterna o estado de conclusão da tarefa
-              />
-              <span className={task.completed ? "completed" : ""}>
-                {task.description}
-              </span>{" "}
-              {/* Exibe a descrição da tarefa, com um estilo diferente se estiver completa */}
-            </div>
-
-            <div className="task-div">
-              <button onClick={() => onEdit(index)}>✏️</button>{" "}
-              {/* Botão para editar a tarefa */}
-              <button onClick={() => onDelete(index)}>🗑️</button>{" "}
-              {/* Botão para excluir a tarefa */}
-            </div>
-          </li>
-        )
-      )}
+      {tasks.map((task, index) => (
+        <li
+          key={index}
+          className={`task-item ${task.completed ? "task-completed" : ""}`} //ternário para troca de fundo quando estiver checked
+        >
+          <div className="task-div">
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => onToggle(index)}
+            />
+            <span className={task.completed ? "completed" : ""}>
+              {task.description}
+            </span>
+          </div>
+          <div className="task-div">
+            <button onClick={() => onEdit(index)}>✏️</button>
+            <button onClick={() => onDelete(index)}>🗑️</button>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 };

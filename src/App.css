@@ -1,18 +1,21 @@
 /* Estilos globais para o aplicativo */
 .App {
-  width: 100%; /* Define a largura máxima do conteúdo */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
   height: 100%;
+  width: 100%;
   background-color: #8758FF;
 }
 
 /* Estilos gerais para botões */
 button {
-  padding: 10px 20px; /* Espaçamento interno do botão */
-  margin-top: 20px; /* Espaçamento superior */
+  padding: 10px 30px; /* Espaçamento interno do botão */
+
   font-size: 1rem; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor para uma mãozinha ao passar o mouse */
-  border: none; /* Remove a borda padrão */
   border-radius: 4px; /* Bordas arredondadas */
-  background-color: #007bff; /* Cor de fundo do botão */
+  background-color: #6C45CE; /* Cor de fundo do botão */
   color: white; /* Cor do texto */
+  border: white solid 1px;
 }

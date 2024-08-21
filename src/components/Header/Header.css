@@ -1,4 +1,5 @@
 .header {
+  width: 90%;
     text-align: center;
     margin: 20px 0;
   }
@@ -6,12 +7,13 @@
   .header h1 {
     
     color: #FCFCFC;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
-  
-  .header p {
-    font-size: 2rem;
-    color: #8758FF;
+
+  .header h1 .day {
+    color: #8758FF; /* Aplica a cor específica ao "day" */
   }
+  
+  
   

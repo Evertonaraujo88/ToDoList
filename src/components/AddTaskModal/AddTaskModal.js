@@ -14,6 +14,7 @@ const AddTaskModal = ({ onAddTask, onClose }) => {
   return (
     <div className="modal">
       <div className="modal-content">
+        <h1>Descreva sua tarefa</h1>
         <input
           type="text"
           value={taskDescription} // Valor atual do campo de entrada

@@ -11,19 +11,19 @@ const TaskList = ({ tasks, onDelete, onEdit, onToggle }) => {
           index // Mapeia cada tarefa para um item da lista
         ) => (
           <li key={index} className="task-item">
-            <div>
-               <input
-              type="checkbox"
-              checked={task.completed} // Marca o checkbox se a tarefa estiver concluída
-              onChange={() => onToggle(index)} // Alterna o estado de conclusão da tarefa
-            />
-            <span className={task.completed ? "completed" : ""}>
-              {task.description}
-            </span>{" "}
-            {/* Exibe a descrição da tarefa, com um estilo diferente se estiver completa */}
+            <div className="task-div">
+              <input
+                type="checkbox"
+                checked={task.completed} // Marca o checkbox se a tarefa estiver concluída
+                onChange={() => onToggle(index)} // Alterna o estado de conclusão da tarefa
+              />
+              <span className={task.completed ? "completed" : ""}>
+                {task.description}
+              </span>{" "}
+              {/* Exibe a descrição da tarefa, com um estilo diferente se estiver completa */}
             </div>
-           
-            <div>
+
+            <div className="task-div">
               <button onClick={() => onEdit(index)}>✏️</button>{" "}
               {/* Botão para editar a tarefa */}
               <button onClick={() => onDelete(index)}>🗑️</button>{" "}

@@ -6,7 +6,7 @@ import Container from './components/ContainerApp/Container';
 function App() {
   return (
     <div className="App">
-      <Container /> {/* Renderiza o Container, que por sua vez conterá os principais componentes */}
+      <Container /> 
     </div>
   );
 }

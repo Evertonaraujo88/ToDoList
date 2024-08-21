@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Header from '../Header/Header';
-import TaskList from '../TaskList/TaskList'
-import TaskFilter from '../TaskFilter/TaskFilter';
-import AddTaskModal from '../AddTaskModal/AddTaskModal';
-import './Container.css';
+import React, { useState } from "react";
+import Header from "../Header/Header";
+import TaskList from "../TaskList/TaskList";
+import TaskFilter from "../TaskFilter/TaskFilter";
+import AddTaskModal from "../AddTaskModal/AddTaskModal";
+import "./Container.css";
 
 // Componente Container: Envolve os componentes principais da aplicação e gerencia o estado da lista de tarefas
 const Container = () => {
   const [tasks, setTasks] = useState([
-    { description: 'Estudar React', completed: false },
-    { description: 'Ler um livro', completed: false },
+    { description: "Estudar React", completed: false },
+    { description: "Ler um livro", completed: false },
   ]);
 
-  const [filterText, setFilterText] = useState('');
+  const [filterText, setFilterText] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   const handleAddTask = (description) => {
@@ -35,22 +35,32 @@ const Container = () => {
     setTasks(updatedTasks);
   };
 
-  const filteredTasks = tasks.filter(task =>
+  const filteredTasks = tasks.filter((task) =>
     task.description.toLowerCase().includes(filterText.toLowerCase())
   );
 
   return (
     <div className="container">
       <Header /> {/* Componente do cabeçalho */}
-      <TaskFilter filterText={filterText} onFilterChange={setFilterText} /> {/* Componente do filtro de tarefas */}
+      <TaskFilter filterText={filterText} onFilterChange={setFilterText} />{" "}
+      {/* Componente do filtro de tarefas */}
       <TaskList
         tasks={filteredTasks}
         onDelete={handleDeleteTask}
         onEdit={handleEditTask}
         onToggle={handleToggleTask}
       />
-      <button onClick={() => setShowModal(true)}>Adicionar Tarefa</button> {/* Botão para abrir o modal de adicionar tarefa */}
-      {showModal && <AddTaskModal onAddTask={handleAddTask} onClose={() => setShowModal(false)} />} {/* Exibe o modal se o estado showModal for true */}
+      <div className="container-button">
+        <button onClick={() => setShowModal(true)}>Nova Tarefa</button>{" "}
+        {/* Botão para abrir o modal de adicionar tarefa */}
+      </div>
+      {showModal && (
+        <AddTaskModal
+          onAddTask={handleAddTask}
+          onClose={() => setShowModal(false)}
+        />
+      )}{" "}
+      {/* Exibe o modal se o estado showModal for true */}
     </div>
   );
 };

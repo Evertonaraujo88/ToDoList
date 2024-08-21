@@ -2,28 +2,40 @@
 .task-list {
   list-style-type: none; /* Remove o estilo de lista padrão (bolinhas) */
   padding: 0; /* Remove o espaçamento interno padrão */
+  width: 100%;
   
 }
 
 /* Estiliza cada item da lista de tarefas */
 .task-item {
-  display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+  display: flex; 
   justify-content: space-between;
-  align-items: center; /* Alinha os itens no centro verticalmente */
-  margin-bottom: 10px; /* Adiciona um espaço de 10px abaixo de cada item */
+  align-items: center; 
+  margin-bottom: 10px; 
   border: black solid 1px;
   border-radius: 5px;
+  background-color: #FCFCFC;
+}
+
+.task-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* Estiliza o checkbox, adicionando um espaço à direita */
 .task-item input[type="checkbox"] {
-  margin-right: 15px; /* Espaçamento à direita do checkbox */
+  margin: 15px 15px; /* Espaçamento à direita do checkbox */
+  width: 27px;
+  height: 27px;
+  
 }
 
 /* Aplica um estilo ao texto da tarefa quando ela estiver marcada como completa */
-.task-item span.completed {
-  text-decoration: line-through; /* Risca o texto */
-  color: #aaa; /* Muda a cor do texto para um cinza claro */
+.task-item input.completed {
+   
+   background-color: #6C45CE; /* Muda a cor do texto para um cinza claro */
 }
 
 /* Estiliza os botões de editar e excluir */

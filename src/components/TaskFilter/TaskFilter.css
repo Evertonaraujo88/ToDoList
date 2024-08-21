@@ -1,9 +1,14 @@
 .task-filter {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
+  width: 70%;
+  padding: 10px 10px 10px 40px; /* Adiciona espaço à esquerda para a imagem */
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-image: url('../../asseets/icons/material-symbols_search.png'); /* Substitua pelo caminho da sua imagem */
+  background-position: 10px center; /* Posiciona a imagem dentro do input */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-size: 20px 20px; /* Ajusta o tamanho da imagem */
+  background-color: #1E123B;
+  color: #FCFCFC;
+}

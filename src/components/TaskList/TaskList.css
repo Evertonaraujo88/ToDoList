@@ -1,0 +1,35 @@
+/* Remove as bolinhas padrão dos itens da lista (list-style-type) e remove o padding padrão da lista */
+.task-list {
+  list-style-type: none; /* Remove o estilo de lista padrão (bolinhas) */
+  padding: 0; /* Remove o espaçamento interno padrão */
+  
+}
+
+/* Estiliza cada item da lista de tarefas */
+.task-item {
+  display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+  justify-content: space-between;
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  margin-bottom: 10px; /* Adiciona um espaço de 10px abaixo de cada item */
+  border: black solid 1px;
+  border-radius: 5px;
+}
+
+/* Estiliza o checkbox, adicionando um espaço à direita */
+.task-item input[type="checkbox"] {
+  margin-right: 15px; /* Espaçamento à direita do checkbox */
+}
+
+/* Aplica um estilo ao texto da tarefa quando ela estiver marcada como completa */
+.task-item span.completed {
+  text-decoration: line-through; /* Risca o texto */
+  color: #aaa; /* Muda a cor do texto para um cinza claro */
+}
+
+/* Estiliza os botões de editar e excluir */
+.task-item button {
+  
+  background: none; /* Remove o fundo padrão do botão */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar o mouse */
+}
